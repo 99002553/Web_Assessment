@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Script> 
+    function clear(){
+        document.getElementById("uname").value="";
+        document.getElementById("uphone").value="";
+        document.getElementById("udate").value="";
+        document.getElementById("").value="";
+        document.getElementById("uadmission1").value=""; 
+        document.getElementById("uadmission2").value=""; 
+    }
+    function display()
+    {
+        var display=document.getElementById("pdisplay");
+        display.innerText=""
+
+        admissionType2=document.getElementById("uname").value
+
+            display.innerText="<li>"+admissionType2+"</li>"
+    }
+    </Script>
+</head>
+<body>
+    <h1>Registration Form</h1><hr/>
+  <div>
+      <p>Enter Name    : <input type="text" id="uname"></p>
+      <p>Enter Phone No: <input type="string" id="uphone"></p>
+      <p>Enter Date  : <input type="date" id="udate"></p>
+      <p>
+        Select the qualification:<br/>
+        <select id="uqualification">
+            <option value="">--Select One--</option>
+            <option value="Graduation">Graduation</option>
+            <option value="Post">Post Graduation</option>
+            <option value="Under">Under Graduation</option>
+            <option value="Pre">Pre University</option>
+            <option value="school">School</option>
+        </select>
+    </p>
+    <p>
+        Admission type:<input type="radio" name="billoc" id="uadmission1">CET<input type="radio" name="billoc" id="uadmission2">Management</p>
+    </p>
+      <p><button onclick="display()">Submit</button> <button onclick="clear()">Clear</button></p>
+  </div>  
+<div>
+    <ol id="display">
+            
+    </ol>
+</div>
+</body>
+</html>
